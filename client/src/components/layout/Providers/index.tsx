@@ -8,7 +8,8 @@ import { ApolloClient, ApolloProvider, InMemoryCache } from "@apollo/client";
 const Providers = ({ children }: { children: ReactNode }) => {
   const client = new ApolloClient({
     uri:
-      "https://project-homequest-api.onrender.com/graphql",
+        import.meta.env.VITE_GRAPHQL_SERVER_URI ||
+      "http://localhost:5000/graphql",
     cache: new InMemoryCache(),
     credentials: 'include'
   });

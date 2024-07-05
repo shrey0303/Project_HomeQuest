@@ -25,7 +25,7 @@ const bootstrapServer = async () => {
   //   })
   // );
  app.use(cors({
-  origin: 'https://master--home-quest-951a5c.netlify.app',
+  origin: 'https://homequst.netlify.app',
   methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
   allowedHeaders: ['Content-Type', 'Authorization'],
   credentials: true

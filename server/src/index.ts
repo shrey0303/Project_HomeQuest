@@ -24,12 +24,12 @@ const bootstrapServer = async () => {
   //     credentials: true
   //   })
   // );
-  app.use(cors({
-    origin: ['https://home-quest-three.vercel.app','http://localhost:5173']
-    methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
-    allowedHeaders: ['Content-Type', 'Authorization'],
-    credentials: true
-  }));
+ app.use(cors({
+  origin: 'https://home-quest-three.vercel.app',
+  methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
+  allowedHeaders: ['Content-Type', 'Authorization'],
+  credentials: true
+}));
   
   app.use(cookieParser());
   app.use(express.json());

@@ -8,7 +8,7 @@ import { ApolloClient, ApolloProvider, InMemoryCache } from "@apollo/client";
 const Providers = ({ children }: { children: ReactNode }) => {
   const client = new ApolloClient({
     uri:
-      "https://pro-home-quest-api.vercel.app/graphql",
+      "https://project-homequest-api.onrender.com",
     cache: new InMemoryCache(),
     credentials: 'include'
   });

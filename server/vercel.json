@@ -12,7 +12,7 @@
       "src": "/(.*)",
       "dest": "dist/index.js",
       "headers": {
-        "Access-Control-Allow-Origin": "https://project-home-quest.vercel.app",
+        "Access-Control-Allow-Origin": "https://home-quest-three.vercel.app",
         "Access-Control-Allow-Credentials": "true"
       }
     }

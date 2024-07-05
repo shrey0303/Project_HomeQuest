@@ -25,7 +25,7 @@ const bootstrapServer = async () => {
   //   })
   // );
  app.use(cors({
-  origin: 'https://home-quest-eosin.vercel.app',
+  origin: 'https://home-quest-pink.vercel.app',
   methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
   allowedHeaders: ['Content-Type', 'Authorization'],
   credentials: true

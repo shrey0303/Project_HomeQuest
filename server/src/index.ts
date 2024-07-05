@@ -25,7 +25,7 @@ const bootstrapServer = async () => {
   //   })
   // );
  app.use(cors({
-  origin: 'https://homequst.netlify.app',
+  origin: ['http://localhost:5173', process.env.CLIENT_URL],
   methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
   allowedHeaders: ['Content-Type', 'Authorization'],
   credentials: true

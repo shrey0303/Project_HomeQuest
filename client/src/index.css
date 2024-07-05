@@ -1,0 +1,73 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,400&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --bg: rgb(230, 230, 230);
+    --bg-soft: rgb(240, 240, 240);
+    --border: rgb(220, 220, 220);
+    --text: rgb(40, 40, 40);
+    --text-soft: rgb(60, 60, 60);
+    --primary:  rgb(54, 19, 18);
+    --secondary: rgb(109, 31, 28);
+  }
+
+  * {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+  }
+
+  html {
+    width: 100vw;
+    height: 100vh;
+    overflow-x: hidden;
+    background-color: var(--bg);
+    color: var(--text);
+    scroll-behavior: smooth;
+  }
+
+  input[type="number"]::-webkit-inner-spin-button,
+  input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+  input[type="number"] {
+    -moz-appearance: textfield;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: rgb(37, 23, 23);
+      --bg-soft: rgb(56, 45, 45);
+      --border: rgb(75, 75, 75);
+      --text: rgb(245, 245, 245);
+      --text-soft: rgb(211, 211, 211);
+      --primary:  rgb(109, 31, 28);
+      --secondary: rgba(80, 0, 0, 0.815);
+    }
+  }
+
+  :root[data-theme="dark"] {
+    --bg: rgb(37, 23, 23);
+    --bg-soft: rgb(56, 45, 45);
+    --border: rgb(75, 75, 75);
+    --text: rgb(245, 245, 245);
+    --text-soft: rgb(211, 211, 211);
+    --primary:  rgb(54, 19, 18);
+    --secondary: rgba(80, 0, 0, 0.815);
+  }
+
+  :root[data-theme="light"] {
+    --bg: rgb(168, 168, 168);
+    --bg-soft: rgb(136, 136, 136);
+    --border: rgb(194, 194, 194);
+    --text: rgb(40, 40, 40);
+    --text-soft: rgb(60, 60, 60);
+    --primary:  rgb(109, 31, 28);
+    --secondary: rgba(80, 0, 0, 0.815);
+  }
+}

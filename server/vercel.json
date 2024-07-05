@@ -11,9 +11,9 @@
     {
       "src": "/(.*)",
       "dest": "dist/index.js",
+      "methods": ["GET", "POST", "PUT", "DELETE", "PATCH", "OPTIONS"],
       "headers": {
-        "Access-Control-Allow-Origin": "https://home-quest-pink.vercel.app",
-        "Access-Control-Allow-Credentials": "true"
+        "Access-Control-Allow-Origin": "*"
       }
     }
   ]

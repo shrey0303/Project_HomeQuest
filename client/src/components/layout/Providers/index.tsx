@@ -9,7 +9,7 @@ const Providers = ({ children }: { children: ReactNode }) => {
   const client = new ApolloClient({
     uri:
       import.meta.env.VITE_GRAPHQL_SERVER_URI ||
-      "http://localhost:5000/graphql",
+      "https://project-home-quest-api.vercel.app/graphql",
     cache: new InMemoryCache(),
     credentials: 'include'
   });

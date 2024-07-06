@@ -4,9 +4,9 @@ import express, { Application, Request, Response, NextFunction } from "express";
 import cors from "cors";
 import cookieParser from "cookie-parser";
 import dotenv from "dotenv";
-import  connectDb  from '../src/config/db';  // Adjust this path according to your structure
-import  context  from '../src/graphql/context';  // Adjust this path according to your structure
-import server from '../src/graphql/index';  
+import  connectDb  from '../config/db';  // Adjust this path according to your structure
+import  context  from '../graphql/context';  // Adjust this path according to your structure
+import server from '../graphql/index';  
 
 dotenv.config();
 

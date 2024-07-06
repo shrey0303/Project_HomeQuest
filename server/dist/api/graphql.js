@@ -12,30 +12,21 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-const cors_1 = __importDefault(require("cors"));
-const dotenv_1 = __importDefault(require("dotenv"));
-const express_1 = __importDefault(require("express"));
-const cookie_parser_1 = __importDefault(require("cookie-parser"));
 const express4_1 = require("@apollo/server/express4");
-const graphql_1 = __importDefault(require("./graphql"));
-const db_1 = __importDefault(require("./config/db"));
-const context_1 = __importDefault(require("./graphql/context"));
+const express_1 = __importDefault(require("express"));
+const cors_1 = __importDefault(require("cors"));
+const cookie_parser_1 = __importDefault(require("cookie-parser"));
+const dotenv_1 = __importDefault(require("dotenv"));
+const db_1 = __importDefault(require("../config/db")); // Adjust this path according to your structure
+const context_1 = __importDefault(require("../graphql/context")); // Adjust this path according to your structure
+const index_1 = __importDefault(require("../graphql/index"));
 dotenv_1.default.config();
 const app = (0, express_1.default)();
-const port = Number(process.env.PORT) || 3000;
 const bootstrapServer = () => __awaiter(void 0, void 0, void 0, function* () {
     yield (0, db_1.default)();
-    yield graphql_1.default.start();
-    // app.use(
-    //   cors({
-    //     origin: 'http://localhost:5173/',
-    //     methods: ['GET', 'POST','PUT','DELETE','OPTIONS'],
-    //     allowedHeaders: ['Content-Type', 'Authorization'],
-    //     credentials: true
-    //   })
-    // );
+    yield index_1.default.start();
     app.use((0, cors_1.default)({
-        origin: 'http://localhost:5173',
+        origin: ['process.env.CLIENT_URL', 'http://localhost:5173'],
         methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
         allowedHeaders: ['Content-Type', 'Authorization'],
         credentials: true
@@ -43,8 +34,12 @@ const bootstrapServer = () => __awaiter(void 0, void 0, void 0, function* () {
     app.use((0, cookie_parser_1.default)());
     app.use(express_1.default.json());
     app.use(express_1.default.urlencoded({ extended: true }));
-    app.use("/graphql", (0, express4_1.expressMiddleware)(graphql_1.default, { context: context_1.default }));
-    app.listen(port, () => console.log(`Server is running on port: ${port}`));
+    app.use("/api/graphql", (0, express4_1.expressMiddleware)(index_1.default, { context: context_1.default }));
+    // Handle 404 errors - place this at the end of your middleware chain
+    app.use((req, res, next) => {
+        res.status(404).send('Not Found');
+    });
 });
 bootstrapServer();
-//# sourceMappingURL=index.js.map
+exports.default = app;
+//# sourceMappingURL=graphql.js.map

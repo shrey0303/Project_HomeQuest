@@ -26,7 +26,7 @@ const bootstrapServer = () => __awaiter(void 0, void 0, void 0, function* () {
     yield (0, db_1.default)();
     yield index_1.default.start();
     app.use((0, cors_1.default)({
-        origin: ['process.env.CLIENT_URL', 'http://localhost:5173'],
+        origin: ['https://home-quest-mu.vercel.app', 'http://localhost:5173'],
         methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
         allowedHeaders: ['Content-Type', 'Authorization'],
         credentials: true

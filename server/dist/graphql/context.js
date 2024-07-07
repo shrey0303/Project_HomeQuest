@@ -16,6 +16,7 @@ const jsonwebtoken_1 = __importDefault(require("jsonwebtoken"));
 exports.default = ({ req, res }) => __awaiter(void 0, void 0, void 0, function* () {
     let user = null;
     const accessToken = req.headers.authorization || req.cookies["access-token"];
+    const refreshToken = req.headers.authorizationreq || req.cookies["refresh-token"];
     if (accessToken && accessToken !== undefined) {
         jsonwebtoken_1.default.verify(accessToken, process.env.JWT_ACCESS_SECRET, (error, decoded) => {
             if (decoded) {
@@ -29,7 +30,22 @@ exports.default = ({ req, res }) => __awaiter(void 0, void 0, void 0, function* 
             }
         });
     }
+    if (refreshToken && refreshToken !== undefined) {
+        jsonwebtoken_1.default.verify(refreshToken, process.env.JWT_REFRESH_SECRET, (error, decoded) => {
+            if (decoded) {
+                const { _id, role } = decoded;
+                user = { _id, role };
+                return {
+                    user,
+                    req,
+                    res,
+                };
+            }
+        });
+    }
     if (!accessToken)
+        res.clearCookie("user");
+    if (!refreshToken)
         res.clearCookie("user");
     return {
         user,

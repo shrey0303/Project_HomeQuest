@@ -33,22 +33,24 @@ export const useAuthStore = create<State & Actions>((set) => {
 
         Cookies.set("user", JSON.stringify(user), {
           sameSite: "None",
-          secure:true,
+          secure: process.env.NODE_ENV === "production",
           expires: 1,
         });
 
-        Cookies.set("access-token", jwt, {
+        Cookies.set("accessToken", jwt, {
+
           sameSite: "None",
-          secure:true,
+          secure: process.env.NODE_ENV === "production",
+          expires: 1,
+        });
+        Cookies.set("refreshToken", jwt, {
+          sameSite: "None",
+          secure: process.env.NODE_ENV === "production",
           expires: 1,
         });
 
-        Cookies.set("refresh-token", jwt, {
-          sameSite: "None",
-          secure:true,
-          expires: 1,
-        });
         
+
         return { ...state, user };
       }),
     logOut: () =>
@@ -58,6 +60,5 @@ export const useAuthStore = create<State & Actions>((set) => {
 
         return { ...state };
       }),
-    
   };
 });

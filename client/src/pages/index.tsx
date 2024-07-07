@@ -12,4 +12,4 @@ export { default as Favorites } from "./Favorites";
 export { default as EditListing } from "./EditListing";
 export { default as CreateListing } from "./CreateListing";
 export { default as Notifications } from "./Notifications";
-export { default as BOT } from "./bot/bot";
+export { default as BOT } from "./bot";

@@ -1,6 +1,6 @@
 import Routes from "./routes";
 import { Footer, Navbar, Providers } from "./components/layout";
-import Chatbot from "./pages/bot/bot";
+import Chatbot from "./pages/bot";
 
 
 const App = () => {

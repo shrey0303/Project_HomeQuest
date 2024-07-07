@@ -15,7 +15,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const mongoose_1 = __importDefault(require("mongoose"));
 const connectDb = () => __awaiter(void 0, void 0, void 0, function* () {
     mongoose_1.default
-        .connect("mongodb+srv://jontywithbond007:BIQHdR1kCUglbECG@cluster0.numd2qo.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0")
+        .connect("mongodb+srv://jontywithbond007:BIQHdR1kCUglbECG@cluster0.numd2qo.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0/test")
         .then(() => console.log("Connected to MongoDB."))
         .catch((error) => console.log(error));
 });

@@ -51,10 +51,10 @@ const Submit = ({ setStep }: { setStep: Dispatch<SetStateAction<number>> }) => {
           className="flex flex-col gap-2 cursor-pointer"
         >
           <p className="hover:text-primary text-textColor transition-all duration-200 cursor-pointer">
-            Building Year: {values.buildingYear}
+            Year Of Construction: {values.buildingYear}
           </p>
           <p className="hover:text-primary text-textColor transition-all duration-200 cursor-pointer">
-            Room and Saloon: {values.roomAndSaloon}
+            Rooms: {values.roomAndSaloon}
           </p>
           <p className="hover:text-primary text-textColor transition-all duration-200 cursor-pointer">
             Bathrooms: {values.bathroom}

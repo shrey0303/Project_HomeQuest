@@ -9,17 +9,17 @@ const NumberFilters = () => {
   return (
     <div className="flex flex-col gap-8">
       <div>
-        <p className="text-xl font-semibold mb-2">Price ($)</p>
+        <p className="text-xl font-semibold mb-2">Price (₹)</p>
         <div className="flex sm:flex-row md:flex-col xl:flex-row flex-col gap-4 items-end">
           <Input
             label=""
-            placeholder="Min Price ($)"
+            placeholder="Min Price (₹)"
             type="number"
             {...register("minPrice")}
           />
           <Input
             label=""
-            placeholder="Max Price ($)"
+            placeholder="Max Price (₹)"
             type="number"
             {...register("maxPrice")}
           />

@@ -128,14 +128,14 @@ class AuthService {
   }
 
   public static async generateAccessToken(params: GenerateParams) {
-    const token = jwt.sign(params, "yHw72P@kM!dZ%uR8rT5vNc3^jQpJxC1tV$zY#oI&fE", {
+    const token = jwt.sign(params, process.env.JWT_ACCESS_SECRET, {
       expiresIn: "30m",
     });
     return token;
   }
 
   public static async generateRefreshToken(params: GenerateParams) {
-    const token = jwt.sign(params, "G@8mL$cW2*VvN#qB%kT5zP!yJ9dR^xF1uMhOp3&e", {
+    const token = jwt.sign(params, process.env.JWT_REFRESH_SECRET, {
       expiresIn: "30 days",
     });
     return token;

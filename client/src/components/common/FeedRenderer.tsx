@@ -26,7 +26,7 @@ const FeedRenderer: FC<RendererProps> = ({
   estates,
   infiniteScroll,
 }) => {
-  if (loading) return <FeedLoader type={cardType} />;
+  //if (loading) return <FeedLoader type={cardType} />;
 
   if (error)
     return (

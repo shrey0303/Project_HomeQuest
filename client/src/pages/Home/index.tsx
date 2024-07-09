@@ -17,8 +17,8 @@ const HomePage = () => {
   const { error } = useQuery(GET_ESTATES_SORTED_BY_DATE, {
     variables: {
       desc: true,
-      limit: 3,
-      offset: 3,
+      limit: LISTING_PER_PAGE,
+      offset: page * LISTING_PER_PAGE,
     },
     onCompleted: ({ estatesSortedByDate }) => {
       page === 0 && setFirstLoading(false);

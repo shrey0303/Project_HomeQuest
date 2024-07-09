@@ -71,13 +71,13 @@ export default {
 
       res.cookie("access-token", accessToken, {
         httpOnly: true,
-        secure: process.env.NODE_ENV === "production",
+        secure: true,
         maxAge: 1000 * 60 * 30,
         sameSite: "None",
       });
       res.cookie("refresh-token", refreshToken, {
         httpOnly: true,
-        secure: process.env.NODE_ENV === "production",
+        secure: true,
         maxAge: 1000 * 60 * 60 * 24 * 7,
         sameSite: "None",
       });

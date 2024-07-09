@@ -10,7 +10,7 @@
   "routes": [
     {
       "src": "/(.*)",
-      "dest": "dist/api/graphql.js",
+      "dest": "/",
       "headers": {
         "Access-Control-Allow-Origin": "https://home-quest-mu.vercel.app",
         "Access-Control-Allow-Credentials": "true"

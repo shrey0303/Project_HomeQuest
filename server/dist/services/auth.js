@@ -98,7 +98,7 @@ class AuthService {
     }
     static generateAccessToken(params) {
         return __awaiter(this, void 0, void 0, function* () {
-            const token = jsonwebtoken_1.default.sign(params, process.env.JWT_ACCESS_SECRET, {
+            const token = jsonwebtoken_1.default.sign(params, "yHw72P@kM!dZ%uR8rT5vNc3^jQpJxC1tV$zY#oI&fE", {
                 expiresIn: "30m",
             });
             return token;
@@ -106,7 +106,7 @@ class AuthService {
     }
     static generateRefreshToken(params) {
         return __awaiter(this, void 0, void 0, function* () {
-            const token = jsonwebtoken_1.default.sign(params, process.env.JWT_REFRESH_SECRET, {
+            const token = jsonwebtoken_1.default.sign(params, "G@8mL$cW2*VvN#qB%kT5zP!yJ9dR^xF1uMhOp3&e", {
                 expiresIn: "30 days",
             });
             return token;

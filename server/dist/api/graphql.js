@@ -31,6 +31,7 @@ const bootstrapServer = () => __awaiter(void 0, void 0, void 0, function* () {
         allowedHeaders: ['Content-Type', 'Authorization'],
         credentials: true
     }));
+    app.options('*', (0, cors_1.default)());
     app.use((0, cookie_parser_1.default)());
     app.use(express_1.default.json());
     app.use(express_1.default.urlencoded({ extended: true }));

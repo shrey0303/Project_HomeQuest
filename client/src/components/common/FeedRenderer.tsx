@@ -2,7 +2,7 @@ import { ApolloError } from "@apollo/client";
 import { Dispatch, FC, SetStateAction } from "react";
 
 import { Estate } from "@/types";
-import { Feed, FeedLoader } from ".";
+import { Feed } from ".";
 
 type RendererProps = {
   cardType: "grid" | "detailed";
@@ -26,7 +26,11 @@ const FeedRenderer: FC<RendererProps> = ({
   estates,
   infiniteScroll,
 }) => {
-  //if (loading) return <FeedLoader type={cardType} />;
+  if (loading) return (
+
+    <h1> Failure </h1>
+
+  );
 
   if (error)
     return (

@@ -33,9 +33,23 @@ export const useAuthStore = create<State & Actions>((set) => {
 
         Cookies.set("user", JSON.stringify(user), {
           sameSite: "None",
+          secure: true,
           expires: 1000 * 60 * 30,
         });
 
+        Cookies.set("access-token", jwt, {
+          sameSite: "None",
+          secure: true,
+          expires: 1000 * 60 * 30,
+        });
+        
+        Cookies.set("refresh-token", jwt, {
+          sameSite: "None",
+          secure: true,
+          expires: 1000 * 60 * 60 * 24 * 30,
+        });
+
+       
         return { ...state, user };
       }),
       

@@ -16,30 +16,11 @@ type Token = {
 export default async ({ req, res }: { req: Request; res: Response }) => {
   let user: User = null;
   const accessToken = req.headers.authorization || req.cookies["access-token"];
-  const refreshToken = req.headers.authorizationreq || req.cookies["refresh-token"];
-  
+
   if (accessToken && accessToken !== undefined) {
     jwt.verify(
       accessToken,
-      process.env.JWT_ACCESS_SECRET,
-      (error: JsonWebTokenError, decoded: Token) => {
-        if (decoded) {
-          const { _id, role } = decoded;
-          user = { _id, role };
-
-          return {
-            user,
-            req,
-            res,
-          };
-        }
-      }
-    );
-  }
-  if(refreshToken && refreshToken !== undefined) {
-    jwt.verify(
-      refreshToken,
-      process.env.JWT_REFRESH_SECRET,
+      "yHw72P@kM!dZ%uR8rT5vNc3^jQpJxC1tV$zY#oI&fE",
       (error: JsonWebTokenError, decoded: Token) => {
         if (decoded) {
           const { _id, role } = decoded;
@@ -56,7 +37,7 @@ export default async ({ req, res }: { req: Request; res: Response }) => {
   }
 
   if (!accessToken) res.clearCookie("user");
-  if (!refreshToken) res.clearCookie("user");
+
   return {
     user,
     req,

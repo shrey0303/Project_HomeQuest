@@ -33,7 +33,7 @@ const Chatbot = () => {
         containerWidth: '100%25',
         layoutWidth: '100%25',
         enableConversationDeletion: 'true',
-        composerPlaceholder: 'Ask Something...',
+        composerPlaceholder: 'Type Hello/Hii to start Conversation.......',
         botId: 'b735fc47-fc2e-4d78-b074-56dd1babb9d1',
         hostUrl: 'https://cdn.botpress.cloud/webchat/v1',
         messagingUrl: 'https://messaging.botpress.cloud',

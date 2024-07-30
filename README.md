@@ -1,4 +1,4 @@
-![HomeQuest](https://drive.google.com/file/d/134Sb5yzzGX2AtukowW2R09ppCsnDCOy5/view?usp=sharing)
+![HomeQuest](https://drive.google.com/uc?id=134Sb5yzzGX2AtukowW2R09ppCsnDCOy5)
 
 # HomeQuest
 
@@ -7,12 +7,12 @@ HomeQuest is a MERN-stack real estate application where users can create account
 
 
 
-## :Site Preview
-![HomeQuest-home](https://drive.google.com/file/d/1EPIH3qMqqn30dEsaTu1Rei2juG6hG5oq/view?usp=sharing)
-![HomeQuest-search](https://drive.google.com/file/d/1a3cf8U4DyllWHK6DmGt2gwoYzW5CPNXc/view?usp=sharing)
-![HomeQuest-chatbot](https://drive.google.com/file/d/1Z06sZM-5r87YyENtk74HgY4wyFQxDRug/view?usp=sharing)
+## Site Preview
+![HomeQuest-home](https://drive.google.com/uc?id=1EPIH3qMqqn30dEsaTu1Rei2juG6hG5oq)
+![HomeQuest-search](https://drive.google.com/uc?id=1a3cf8U4DyllWHK6DmGt2gwoYzW5CPNXc)
+![HomeQuest-chatbot](https://drive.google.com/uc?id=1Z06sZM-5r87YyENtk74HgY4wyFQxDRug)
 
-## :Installation:
+## Installation:
 
 
 

@@ -21,8 +21,6 @@ HomeQuest is a MERN-stack real estate application where users can create account
 git clone https://github.com/shrey0303/Project_HomeQuest.git
 
 cd Project_HomeQuest
-```
-
 
 cd client
 

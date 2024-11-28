@@ -5,7 +5,7 @@ Below is the Example of the process:
 
 Home 
 
-https://drive.google.com/uc?id=1SNo2kfQrbyk6elwAefKW6YdpLCqf2kgw
+![image](https://drive.google.com/uc?id=1SNo2kfQrbyk6elwAefKW6YdpLCqf2kgw)
 
 1. Admin logged in:
 
